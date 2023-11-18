@@ -6,7 +6,7 @@
       name="description"
       content="Generate Subgoal Images before Act: Unlocking the Chain-of-Thought Reasoning in Diffusion Model for Robot Manipulation with Multimodal Prompts."
     />
-    <meta name="keywords" content="Reinforcement Learning, Diffusion Model, Trajectory Optimization" />
+    <meta name="keywords" content="Reinforcement Learning, Diffusion Model, Robotics Manipulations" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
       CoTDiffusion:Unlocking the Chain-of-Thought Reasoning in Diffusion Model for Robot Manipulation with Multimodal Prompts
@@ -32,15 +32,15 @@
           <div class="bar"></div
         ></a>
         <a class="barWrapper" clear href="#tr2-a" id="bar3"
-          ><span>Trajectory Translation</span>
+          ><span>Overall Pipeline</span>
           <div class="bar"></div
         ></a>
         <a class="barWrapper" clear href="#results-a" id="bar4"
-          ><span>Results</span>
+          ><span>Coarse Semantic Alignment</span>
           <div class="bar"></div
         ></a>
         <a class="barWrapper" clear href="#attn-a" id="bar5"
-          ><span>Attention Analysis</span>
+          ><span>Fine-grained Diffusion Training</span>
           <div class="bar"></div
         ></a>
       </div>
@@ -50,127 +50,17 @@
         <h1 class="title">
           Generate Subgoal Images before Act: Unlocking the Chain-of-Thought Reasoning in Diffusion Model for Robot Manipulation with Multimodal Prompts
         </h1>
-        <section class="authors">
-          <ul>
-            <li>
-              <span
-                ><a
-                  href="https://fei-ni.github.io"
-                  rel="noreferrer"
-                  target="_blank"
-              >Fei Ni</a
-                ><sup>1</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="http://www.icdai.org/jianye.html/"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Jianye Hao</a
-                ><sup>1 3</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="https://yaomarkmu.github.io/"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Yao Mu</a
-                ><sup>2</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="https://scholar.google.com/citations?hl=zh-CN&user=83JhosMAAAAJ"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Yifu Yuan</a
-                ><sup>1</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="https://yanzzzzz.github.io"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Yan Zheng</a
-                ><sup>1</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="https://scholar.google.com.hk/citations?user=KWZG_YsAAAAJ&hl=zh-CN&oi=sra"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Bin Wang</a
-                ><sup>3</sup></span
-              >
-            </li>
-            <li>
-              <span
-                ><a
-                  href="https://liang-zx.github.io/"
-                  rel="noreferrer"
-                  target="_blank"
-                  >Zhixuan Liang</a
-                ><sup>2</sup></span
-              >
-            </li>
-          </ul>
-        </section>
-        <section class="affiliations">
-          <ul>
-            <span class="author-block"><sup>1</sup>Tianjin University,</span>
-            <span class="author-block"><sup>2</sup>The University of Hong Kong,</span>
-            <span class="author-block"><sup>3</sup>Huawei Noah's Ark Lab</span>
-          </ul>
-        </section>
-        <section class="links">
-          <ul>
-            <a href="https://arxiv.org/abs/2302.01877" rel="noreferrer" target="_blank">
-              <li>
-                <span class="icon"> <img src="./public/paper.svg" /> </span
-                ><span>Paper</span>
-              </li>
-            </a>
-<!--            <a-->
-<!--              href="https://youtu.be/ZjRYlRRV9IA"-->
-<!--              rel="noreferrer"-->
-<!--              target="_blank"-->
-<!--            >-->
-<!--              <li>-->
-<!--                <span class="icon"> <img src="./public/video.svg" /> </span-->
-<!--                ><span>Video</span>-->
-<!--              </li>-->
-<!--            </a>-->
-            <a
-              href="https://github.com/Liang-ZX/adaptdiffuser"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <li>
-                <span class="icon">
-                  <img src="./public/github.svg" />
-                </span>
-                <span>Code</span>
-              </li>
-            </a>
-            <!-- <a><li>Video</li></a> -->
-          </ul>
-        </section>
+
         <a class="anchor" id="abstract-a"></a>
         <h2>Abstract</h2>
         <p class="abstract" style="font-family: 'Times New Roman', Arial;">
           <!-- Diffusion models have demonstrated their powerful generative capability in many tasks, with great potential to serve as a paradigm for offline reinforcement learning. However, the quality of the diffusion model is limited by the insufficient diversity of training data, which hinders the performance of planning and the generalizability to new tasks. This paper introduces AdaptDiffuser, an evolutionary planning method with diffusion that can self-evolve to improve the diffusion model hence a better planner, not only for seen tasks but can also adapt to unseen tasks. AdaptDiffuser enables the generation of rich synthetic expert data for goal-conditioned tasks using guidance from reward gradients. It then selects high-quality data via a discriminator to finetune the diffusion model, which improves the generalization ability to unseen tasks. Empirical experiments on two benchmark environments and two carefully designed unseen tasks in KUKA industrial robot arm and Maze2D environments demonstrate the effectiveness of AdaptDiffuser. For example, AdaptDiffuser not only outperforms the previous art <a href="https://diffusion-planning.github.io/" rel="noreferrer" target="_blank">Diffuser</a> by 20.8% on Maze2D and 7.5% on MuJoCo locomotion, but also adapts better to new tasks, e.g., KUKA pick-and-place, by 27.9% without requiring additional expert data. -->
 
-          Recently, diffusion model shines as a promising backbone for the sequence modeling paradigm in offline reinforcement learning. However, these works mostly lack the generalization ability across tasks with reward or dynamics change. To tackle this challenge, in this paper we propose a task-oriented conditioned diffusion planner for offline meta-RL(MetaDiffuser), which considers the generalization problem as conditional trajectory generation task with contextual representation. The key is to learn a context conditioned diffusion model which can generate task-oriented trajectories for planning across diverse tasks. To enhance the dynamics consistency of the generated trajectories while encouraging trajectories to achieve high returns, we further design a dual-guided module in the sampling process of the diffusion model. The proposed framework enjoys the robustness to the quality of collected warm-start data from the testing task and the flexibility to incorporate with different task representation method. The experiment results on MuJoCo benchmarks show that MetaDiffuser outperforms other strong offline meta-RL baselines, demonstrating the outstanding conditional generation ability of diffusion architecture.
-        </p>
+          Robotics agents often struggle to understand and follow the multi-modal prompts in complex manipulation scenes which are challenging to be sufficiently and accurately described by text alone. Moreover, for long-horizon manipulation tasks, the deviation from general instruction tends to accumulate if lack of intermediate guidance from high-level subgoals. For this, we consider can we  \textbf{generate subgoal images before act} to enhance the instruction following in long-horizon manipulation with multi-modal prompts?
+Inspired by the great success of diffusion model in image generation tasks, we propose a novel hierarchical framework named as \alg that incorporates diffusion model as a high-level planner to convert the general and multi-modal prompts into coherent visual subgoal plans, which further guide the low-level foundation model before action execution.
+We design a semantic alignment module that can anchor the progress of generated keyframes along a coherent generation chain, unlocking the chain-of-thought reasoning ability of diffusion model. Additionally, we propose bi-directional generation and frame concat mechanism to further enhance the fidelity of generated subgoal images and the accuracy of instruction following.
+The experiments cover various robotics manipulation scenarios including visual reasoning, visual rearrange, and visual constraints. \alg achieves outstanding performance gain compared to the baselines without explicit subgoal generation, which proves that a subgoal image is worth a thousand words of instruction.
+The details and visualizations are available at \url{https://cotdiffusion.github.io}.        </p>
       </section>
       <br />
       <section class="head-media">
@@ -190,12 +80,7 @@
           />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
           <p class="caption" style="text-align: justify; font-family: 'Times New Roman'"><br />
-            <strong>Motivation overview of MetaDiffuser.</strong> It enables diffusion models to generate rich synthetic expert data using guidance from reward gradients of either seen or unseen goal-conditioned tasks. Then, it iteratively selects high-quality data via a discriminator to finetune the diffusion model for self-evolving, leading to improved performance on seen tasks and better generalizability to unseen tasks.
-            Planning with diffusion model (Janner et al., 2022b) provides a promising paradigm for offline RL, which utilizes
-diffusion model as a trajectory generator by joint diffusing the states and actions from the noise to formulate the
-sequence decision-making problem as standard generative
-modeling. 
-          </p>
+            <strong>A motivation example of robotics manipulation tasks in multi-modal instructions. The subgoal images are worth a thousand words, inspiring us to propose a novel framework \alg to generate goal images step-by-step before act.          </p>
 
         </div>
       </section>
@@ -226,7 +111,7 @@ modeling.
 <!--      </section>-->
       <a class="anchor" id="tr2-a"></a>
       <section class="details">
-        <h2>Framework of MetaDiffuser</h2>
+        <h2>Overall Pipeline </h2>
         <!-- <p>
           The core idea of our work is to simplify task-solving by enabling the
           low-level agent to explicitly focus only on low-level skills such as
@@ -234,13 +119,9 @@ modeling.
           a high-level agent. The objective of the low-level agent now is to
           simply follow the high-level agent as closely as possible.
         </p> -->
-        <p style="font-family: 'Times New Roman'""> The overview of MetaDiffuser. During meta-training phase, a task-oriented context encoder is trained jointly with conditioned
-dynamics model and reward model in a self-supervised manner to infer the current task from the recent historical transitions. Then, the
-multi-task trajectories can be labeled with the trained context encoder and the inferred context are injected in the conditioned diffusion
-model to estimating the multi-modal distribution mixed by different training tasks. During meta-testing phase, context encoder can
-capture the task information from provided warm-start data from the test task. Then the conditioned diffusion model can manipulate the
-noise model to denoise out desired trajectories for the test task with the inferred context. Additionally, the pretrained dynamics model and
-reward model can serve as classifiers for evaluation, with gradient to guide the conditional generation in a classifier-guide fashion.
+        <p style="font-family: 'Times New Roman'""> Method overview: \alg consists of a multi-modal encoder and vision encoder $\mathcal{V}$ , semantic alignment module $\mathcal{S}$, conditional diffusion model $\mathcal{E}$ and foundation model $\mathcal{F}$ for action planning.
+The prompt and observation tokens are combined and fed into the semantic alignment module to identify the current reasoning chain step, providing progressive guidance for the diffusion model to generate the next subgoal image.
+The generated keyframes are further fed to the foundation model which predicts action sequences to achieve the imagined goal scene and this recursive process repeats in a receding horizon control loop until the task is finished.
 
         </p>
 
@@ -260,7 +141,7 @@ reward model can serve as classifiers for evaluation, with gradient to guide the
 
       <a class="anchor" id="tr2-a"></a>
       <section class="details">
-        <h2>Dual guide in the Trajectory Generation</h2>
+        <h2>Coarse Semantic Alignment</h2>
         <!-- <p>
           The core idea of our work is to simplify task-solving by enabling the
           low-level agent to explicitly focus only on low-level skills such as
@@ -268,89 +149,18 @@ reward model can serve as classifiers for evaluation, with gradient to guide the
           a high-level agent. The objective of the low-level agent now is to
           simply follow the high-level agent as closely as possible.
         </p> -->
-        <p style="font-family: 'Times New Roman'""> Previous work (Janner et al., 2022a) trains an extra reward predictor to evaluate the accumulative return of generated trajectories and utilizes the gradient of return as a guidance in the sampling process of diffusion model, to encourage the generated trajectories to achieve high return. However, during meta-testing for unseen tasks, the conditional generated trajectories may not always obey dynamics constraints due to the aggressive guidance aim for high return, making it difficult for the planner to follow the expected trajectories during the interaction with the environment. Therefore, we propose a dual-guide to enhance the dynamics consistency of generated trajectories while encouraging the high return simultaneously.
-
+        <p style="font-family: 'Times New Roman'""> For the challenge of explicit decomposing step-wise sub-prompts from multi-modal prompts, the diffusion model struggles to generate sequentially coherent keyframes that incrementally advance the prompt instructions and execution progress. The diffusion model fails to identify the stage of current generated keyframes onto the whole chain-of-thought progress and the generated sub-goals images may exhibit repetitions, skipping, or even backtracking to visited subgoals. To alleviate this dilemma, we design a semantic alignment module to empower diffusion model to track the progress of generated keyframes into the entire chain.
         </p>
 
-        <div style="display: flex; margin: auto; width: 95%">
-          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Generated Trajectories.</strong>  </p>
-          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Real Trajecories.</strong> </p>
-          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Generated Trajectories.</strong>  </p>
-          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Real Trajecories.</strong> </p>
-        </div>
+<!--        <div style="display: flex; margin: auto; width: 95%">-->
+<!--          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Generated Trajectories.</strong>  </p>-->
+<!--          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Real Trajecories.</strong> </p>-->
+<!--          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Generated Trajectories.</strong>  </p>-->
+<!--          <p style="font-family: 'Times New Roman'; width: 25%;%">       <strong>Real Trajecories.</strong> </p>-->
+<!--        </div>-->
 
 
-        <div style="display: flex; margin: auto; width: 95%">
-          <!-- <img
-          style="width: 90%"
-          src="./public/images/framework.png"
-          /> -->
-          
-          <!-- br /> -->
-          <img
-          style="width: 40%;%"
-          src="./public/images/walker_without.gif"
-          /> 
-          <img
-          style="width: 40%;%"
-          src="./public/images/walker_with.gif"
-          /> 
-
-        </div>
-          <br />
-        <div style="display: flex; margin: auto; width: 95%">
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Walker-Params without dual-guide. </p>
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Walker-Params with dual-guide. </p>
-
-        </div>
-
-        <div style="display: flex; margin: auto; width: 95%">
-          <!-- <img
-          style="width: 90%"
-          src="./public/images/framework.png"
-          /> -->
-          
-          <!-- br /> -->
-          <img
-          style="width: 40%;%"
-          src="./public/images/hopper_without.gif"
-          /> 
-          <img
-          style="width: 40%;%"
-          src="./public/images/hopper_with.gif"
-          /> 
-
-        </div>
-          <br />
-        <div style="display: flex; margin: auto; width: 95%">
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Hopper-Params without dual-guide. </p>
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Hopper-Params with dual-guide. </p>
-
-        </div>
-
-        <div style="display: flex; margin: auto; width: 95%">
-          <!-- <img
-          style="width: 90%"
-          src="./public/images/framework.png"
-          /> -->
-          
-          <!-- br /> -->
-          <img
-          style="width: 40%;%"
-          src="./public/images/cheetah_without.gif"
-          /> 
-          <img
-          style="width: 40%;%"
-          src="./public/images/cheetah_with.gif"
-          /> 
-
-        </div>
-          <br />
-        <div style="display: flex; margin: auto; width: 95%">
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Cheetah-Vel without dual-guide. </p>
-          <p style="font-family: 'Times New Roman'; width: 50%;%">       Cheetah-Vel with dual-guide. </p>
-
-        </div>
+        
 
         <!-- <h2>Method</h2>
         <p>
